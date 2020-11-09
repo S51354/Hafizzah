@@ -1,0 +1,12 @@
+def augment_function (function,decators)
+    def function(x):
+        print("Before calling " + func.__name__)
+        function(x)
+        decators(x)
+        print("After calling " + func.__name__)
+    return function
+
+def decorator(x):
+    print("Hi,foo has been called with " + str(x))
+
+decorator("Hi")
